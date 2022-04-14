@@ -9,6 +9,9 @@ public class GameHandler : MonoBehaviour {
 
   public static int playerStat;
 
+    public static bool gotitem1 = false;
+    public static bool gotitem2 = false;
+    public static bool gotitem3 = false;
          public static bool GameisPaused = false;
          public GameObject pauseMenuUI;
          public AudioMixer mixer;

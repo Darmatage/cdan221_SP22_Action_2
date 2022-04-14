@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6532903689123422388}
   - component: {fileID: 5173955686047767696}
+  - component: {fileID: 7114586690927183032}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -41,5 +42,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b78eed1acda4648991bad81c6df216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 249167983285609338, guid: 8b70cc750ba8a42f49a8f4801672258b, type: 3}
+  mixer: {fileID: 24100000, guid: 2531ea734dd4e45e38258797112e4af2, type: 2}
+  StartPlayerHealth: 100
+  healthText: {fileID: 0}
+  tokensText: {fileID: 0}
+  isDefending: 0
+--- !u!114 &7114586690927183032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718703624593469465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80dbd2b6aa0241d8be216867eeb4a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
