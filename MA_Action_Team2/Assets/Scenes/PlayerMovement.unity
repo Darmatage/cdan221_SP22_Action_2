@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  jumpForce: 20
+  jumpForce: 10
   feet: {fileID: 1794303487}
   groundLayer:
     serializedVersion: 2
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b4caae3c8f8ce4e896b5707f825858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
+  fallMultiplier: 5
   lowJumpMultiplier: 2
 --- !u!1 &842263993
 GameObject:
