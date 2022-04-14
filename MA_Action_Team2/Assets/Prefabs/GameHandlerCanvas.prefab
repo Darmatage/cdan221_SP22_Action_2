@@ -2200,13 +2200,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6955679285199924543}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7576681431819377054}
+        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
+        m_MethodName: Button_CloseShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3060,11 +3060,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
---- !u!1 &6955679285199924543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7718703624593469465, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
-  m_PrefabInstance: {fileID: 835929519508135206}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5850272891173731730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6532903689123422388, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
@@ -3075,7 +3070,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5173955686047767696, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
   m_PrefabInstance: {fileID: 835929519508135206}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6955679285199924543}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b78eed1acda4648991bad81c6df216, type: 3}
@@ -3086,7 +3081,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7114586690927183032, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
   m_PrefabInstance: {fileID: 835929519508135206}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6955679285199924543}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c80dbd2b6aa0241d8be216867eeb4a78, type: 3}
