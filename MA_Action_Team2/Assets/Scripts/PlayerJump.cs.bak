@@ -29,7 +29,7 @@ public class PlayerJump : MonoBehaviour {
       public void Jump() {
             rb.velocity = Vector2.up * jumpForce;
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
-            //rb.velocity = movement;
+            rb.velocity = movement;
       }
 
       public bool IsGrounded() {
