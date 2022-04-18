@@ -13,12 +13,11 @@ public class ShopMenu : MonoBehaviour{
       public GameObject item1BuyButton;
       public GameObject item2BuyButton;
       public GameObject item3BuyButton;
-      public int item1Cost = 5;
-      public int item2Cost = 6;
-      public int item3Cost = 2;
-      public static bool gotitem1 = false;
-      public static bool gotitem2 = false;
-      public static bool gotitem3 = false;
+      public GameObject item4BuyButton;
+      public int item1Cost = 1;
+      public int item2Cost = 2;
+      public int item3Cost = 4;
+      public int item4Cost = 8;
       //public AudioSource KaChingSFX;
 
       void Start (){
@@ -27,17 +26,22 @@ public class ShopMenu : MonoBehaviour{
       }
 
       void Update (){
-            if ((GameHandler.gotTokens >= item1Cost) && (GameHandler.gotitem1 == false)) {
+            if ((GameHandler.gotMutagens >= item1Cost) && (GameHandler.mutation1active == false)) {
                         item1BuyButton.SetActive(true);}
             else { item1BuyButton.SetActive(false);}
 
-            if ((GameHandler.gotTokens >= item2Cost) && (GameHandler.gotitem2 == false)) {
+            if ((GameHandler.gotMutagens >= item2Cost) && (GameHandler.mutation2active == false)) {
                         item2BuyButton.SetActive(true);}
             else { item2BuyButton.SetActive(false);}
 
-            if ((GameHandler.gotTokens >= item3Cost) && (GameHandler.gotitem3 == false)) {
+            if ((GameHandler.gotMutagens >= item3Cost) && (GameHandler.mutation3active == false)) {
                         item3BuyButton.SetActive(true);}
             else { item3BuyButton.SetActive(false);}
+			
+			if ((GameHandler.gotMutagens >= item4Cost) && (GameHandler.mutation4active == false)) {
+                        item4BuyButton.SetActive(true);}
+            else { item4BuyButton.SetActive(false);}
+			
       }
 
       //Button Functions:
@@ -56,22 +60,46 @@ public class ShopMenu : MonoBehaviour{
       }
 
       public void Button_BuyItem1(){
-            gameHandler.playerGetTokens((item1Cost * -5));
-            GameHandler.gotitem1 = true;
+            gameHandler.playerGetMutagens((item1Cost * -1));
+            GameHandler.mutation1active = true;
             //KaChingSFX.Play();
+			
+			GameHandler.mutation2active = false;
+			GameHandler.mutation3active = false;
+			GameHandler.mutation4active = false;
+			
       }
 
       public void Button_BuyItem2(){
-            gameHandler.playerGetTokens((item2Cost * -6));
-            GameHandler.gotitem2 = true;
+            gameHandler.playerGetMutagens((item2Cost * -1));
+            GameHandler.mutation2active = true;
             //KaChingSFX.Play();
+			
+			GameHandler.mutation1active = false;
+			GameHandler.mutation3active = false;
+			GameHandler.mutation4active = false;
       }
 
       public void Button_BuyItem3(){
-            gameHandler.playerGetTokens((item3Cost * -2));
-            GameHandler.gotitem3 = true;
+            gameHandler.playerGetMutagens((item3Cost * -1));
+            GameHandler.mutation3active = true;
             //KaChingSFX.Play();
+			
+			GameHandler.mutation1active = false;
+			GameHandler.mutation2active = false;
+			GameHandler.mutation4active = false;
       }
 
+
+      public void Button_BuyItem4(){
+            gameHandler.playerGetMutagens((item4Cost * -1));
+            GameHandler.mutation4active = true;
+            //KaChingSFX.Play();
+			
+			GameHandler.mutation1active = false;
+			GameHandler.mutation2active = false;
+			GameHandler.mutation3active = false;
+			
+      }
 
 }

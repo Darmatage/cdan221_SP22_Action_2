@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour {
       public bool isAlive = true;
       //public AudioSource WalkSFX;
       private Vector3 hMove;
+	  public LayerMask climbable;
+	  public bool canClimbThis;
 
       void Start(){
            //animator = gameObject.GetComponentInChildren<Animator>();
@@ -21,7 +23,12 @@ public class PlayerMove : MonoBehaviour {
       void Update(){
             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
            hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-           if (isAlive == true){
+		   
+		   if (GameHandler.mutation2active == true){
+				hMove = new Vector3( 0.0f, Input.GetAxis("Vertical"), 0.0f);
+           }
+		   
+		   if (isAlive == true){
                  
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
             }
@@ -58,4 +65,18 @@ public class PlayerMove : MonoBehaviour {
             theScale.x *= -1;
             transform.localScale = theScale;
       }
+	  
+	  
+	  void OnTriggerStay2D(Collider2D other){
+		  if (other.gameObject.layer == climbable){
+			canClimbThis = true;
+		  }
+	  }
+	  
+	  void OnTriggerExit2D(Collider2D other){
+		  if (other.gameObject.layer == climbable){
+			canClimbThis = false;
+		  }
+	  }
+	  
 }
