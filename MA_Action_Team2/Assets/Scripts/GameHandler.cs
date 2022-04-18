@@ -10,7 +10,7 @@ public class GameHandler : MonoBehaviour {
 
 
     public static bool mutation1active = false; // Head lamp
-    public static bool mutation2active = false; // Octopous legs
+    public static bool mutation2active = false; // Octopus legs
     public static bool mutation3active = false; // Shark teeth
     public static bool mutation4active = false; // Poison dart / range attack
 
