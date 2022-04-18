@@ -62,3 +62,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80dbd2b6aa0241d8be216867eeb4a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameHandler: {fileID: 5173955686047767696}
+  shopMenuUI: {fileID: 0}
+  buttonOpenShop: {fileID: 0}
+  item1BuyButton: {fileID: 0}
+  item2BuyButton: {fileID: 0}
+  item3BuyButton: {fileID: 0}
+  item1Cost: 5
+  item2Cost: 6
+  item3Cost: 2
