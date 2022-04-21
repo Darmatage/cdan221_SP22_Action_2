@@ -1,31 +1,44 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour {
+public class PlayerAttackMelee : MonoBehaviour{
 
-	private bool FaceRight = true;  // determine which way player is facing.
-	public float runSpeed = 10f;
+      //public Animator animator;
+      public Transform attackPt;
+      public float attackRange = 0.5f;
+      public float attackRate = 2f;
+      private float nextAttackTime = 0f;
+      public int attackDamage = 40;
+      public LayerMask enemyLayers;
 
-	void Update () {
-		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
-		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
-		transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
+      void Start(){
+           //animator = gameObject.GetComponentInChildren<Animator>();
+      }
 
-		// if input is moving player right and player faces left, turn, and vice-versa
-		if ((hMove.x < 0 && !FaceRight) || (hMove.x > 0 && FaceRight)){
-			Turn();
-		}
-	}
+      void Update(){
+           if (Time.time >= nextAttackTime){
+                  //if (Input.GetKeyDown(KeyCode.Space))
+                 if (Input.GetAxis("Attack") > 0){
+                        Attack();
+                        nextAttackTime = Time.time + 1f / attackRate;
+                  }
+            }
+      }
 
-	private void Turn()
-	{
-		// Switch player facing label
-		FaceRight = !FaceRight;
+      void Attack(){
+            //animator.SetTrigger ("Melee");
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPt.position, attackRange, enemyLayers);
+           
+            foreach(Collider2D enemy in hitEnemies){
+                  Debug.Log("We hit " + enemy.name);
+                  enemy.GetComponent<EnemyMeleeDamage>().TakeDamage(attackDamage);
+            }
+      }
 
-		// Multiply player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
+      //NOTE: to help see the attack sphere in editor:
+      void OnDrawGizmosSelected(){
+           if (attackPt == null) {return;}
+            Gizmos.DrawWireSphere(attackPt.position, attackRange);
+      }
 }
