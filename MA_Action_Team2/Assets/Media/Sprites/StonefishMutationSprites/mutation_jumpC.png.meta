@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b96a48736f622f84aae40932e49a4869
+guid: 8e41fc3a8f9ba7949a097fbc65c1e2e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8585352236235649829
-    second: mutation_idle_0
+      213: -3837574902017556056
+    second: mutation_jumpC_0
   - first:
-      213: -7818424716188427363
-    second: mutation_idle_1
+      213: 7110049472520896214
+    second: mutation_jumpC_1
   - first:
-      213: 8804663347202719042
-    second: mutation_idle_2
+      213: 384942764609510983
+    second: mutation_jumpC_2
   - first:
-      213: -763850851418814500
-    second: mutation_idle_3
+      213: -1298470070224075829
+    second: mutation_jumpC_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mutation_idle_0
+      name: mutation_jumpC_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5237e682f5c452770800000000000000
-      internalID: 8585352236235649829
+      spriteID: 8a10a4e75f13ebac0800000000000000
+      internalID: -3837574902017556056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_idle_1
+      name: mutation_jumpC_1
       rect:
         serializedVersion: 2
         x: 64
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b5478f4206f7390800000000000000
-      internalID: -7818424716188427363
+      spriteID: 6debf091358fba260800000000000000
+      internalID: 7110049472520896214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_idle_2
+      name: mutation_jumpC_2
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24d7be84aa2703a70800000000000000
-      internalID: 8804663347202719042
+      spriteID: 74e1867a767975500800000000000000
+      internalID: 384942764609510983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_idle_3
+      name: mutation_jumpC_3
       rect:
         serializedVersion: 2
         x: 64
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd74dcb92b14665f0800000000000000
-      internalID: -763850851418814500
+      spriteID: bc341d8c958eafde0800000000000000
+      internalID: -1298470070224075829
       vertices: []
       indices: 
       edges: []

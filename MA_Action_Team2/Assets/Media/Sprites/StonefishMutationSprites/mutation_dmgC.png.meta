@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4647d7b2558fb534f9962cbdf878a1bb
+guid: e07557cf508d4854a87a66da16d80da6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7923523222263970351
-    second: mutation_dmg_0
+      213: 675105939195047097
+    second: mutation_dmgC_0
   - first:
-      213: 6383183650517469874
-    second: mutation_dmg_1
+      213: -3584191785660687556
+    second: mutation_dmgC_1
   - first:
-      213: 4562280947903349261
-    second: mutation_dmg_2
+      213: 317382406513220907
+    second: mutation_dmgC_2
   - first:
-      213: 7599313489226870369
-    second: mutation_dmg_3
+      213: -6637753900877584017
+    second: mutation_dmgC_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mutation_dmg_0
+      name: mutation_dmgC_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5c5672c9df90290800000000000000
-      internalID: -7923523222263970351
+      spriteID: 9bc2a7b56457e5900800000000000000
+      internalID: 675105939195047097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_dmg_1
+      name: mutation_dmgC_1
       rect:
         serializedVersion: 2
         x: 64
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bacc29e5bf959850800000000000000
-      internalID: 6383183650517469874
+      spriteID: c3b52d09f84624ec0800000000000000
+      internalID: -3584191785660687556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_dmg_2
+      name: mutation_dmgC_2
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d02cf41a95a705f30800000000000000
-      internalID: 4562280947903349261
+      spriteID: b2ddd2efd91976400800000000000000
+      internalID: 317382406513220907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mutation_dmg_3
+      name: mutation_dmgC_3
       rect:
         serializedVersion: 2
         x: 64
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16ea3360b5f267960800000000000000
-      internalID: 7599313489226870369
+      spriteID: f696ab7def5f1e3a0800000000000000
+      internalID: -6637753900877584017
       vertices: []
       indices: 
       edges: []
