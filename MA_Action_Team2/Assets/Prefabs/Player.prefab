@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d086f8a1a20a1e146b8d484d16737c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e599544a7d4d44e45a804930691383f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   attackPt: {fileID: 8842478022799504344}
   attackRange: 0.5
   attackRate: 2
@@ -375,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f760d7ad5e37c4b91d5a1c72c6b6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   rb2D: {fileID: 0}
 --- !u!1 &4014649764606411822
 GameObject:
