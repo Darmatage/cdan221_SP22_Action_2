@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208644064197308043, guid: b2d9154ee5065fb46b2540284690e9b0, type: 3}
       propertyPath: NextLevel
-      value: Level5
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d9154ee5065fb46b2540284690e9b0, type: 3}
