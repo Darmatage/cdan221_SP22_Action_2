@@ -729,6 +729,10 @@ PrefabInstance:
       propertyPath: item3BuyButton
       value: 
       objectReference: {fileID: 1582798178}
+    - target: {fileID: 7114586690927183032, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
+      propertyPath: item4BuyButton
+      value: 
+      objectReference: {fileID: 1582798178}
     - target: {fileID: 7718703624593469465, guid: 575505a30091f8d43aa854dbf3f0d67f, type: 3}
       propertyPath: m_Name
       value: GameHandler
