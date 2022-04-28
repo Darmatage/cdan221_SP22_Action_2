@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformMove : MonoBehaviour {
 
-       private float speed = 2f;
+       private float speed = 5f;
        private bool moveToA = true;
        public Transform moveTargetA;
        public Transform moveTargetB;

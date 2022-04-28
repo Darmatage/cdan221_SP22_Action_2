@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7109545585965034004}
   - component: {fileID: 8994042081917597063}
   m_Layer: 5
-  m_Name: TextGold
+  m_Name: TextMutagen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -290,7 +290,7 @@ MonoBehaviour:
   isAlive: 1
   climbable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   canClimbThis: 0
 --- !u!114 &1232901616195454577
 MonoBehaviour:

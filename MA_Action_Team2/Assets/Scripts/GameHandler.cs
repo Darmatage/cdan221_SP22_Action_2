@@ -35,6 +35,10 @@ public class GameHandler : MonoBehaviour {
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
     
+	
+	//TakeDamage
+	 public static int MaxHealth = 100;
+     public static int CurrentHealth = 100;
 
 	void Awake (){
 		SetLevel (volumeLevel);
@@ -110,7 +114,7 @@ public class GameHandler : MonoBehaviour {
             healthTextTemp.text = "Health: " + playerHealth;
 
             Text tokensTextTemp = tokensText.GetComponent<Text>();
-            tokensTextTemp.text = "Metagens: " + gotMutagens;
+            tokensTextTemp.text = "Mutagens: " + gotMutagens;
       }
       public void playerDies(){
             player.GetComponent<PlayerHurt>().playerDead();
@@ -145,4 +149,19 @@ public class GameHandler : MonoBehaviour {
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
+	  
+	   public void TakeDamage(int damage){
+              CurrentHealth -= damage;
+              UpdateHealth();
+              sceneName = SceneManager.GetActiveScene().name;
+              if (CurrentHealth >= MaxHealth){CurrentHealth = MaxHealth;}
+              if ((CurrentHealth <= 0) && (sceneName != "EndLose")){
+                     SceneManager.LoadScene("EndLose");
+              }
+       }
+
+       public void UpdateHealth(){
+              Text healthTextB = healthText.GetComponent<Text>();
+              healthTextB.text = "Current Health: " + CurrentHealth + "\n Max Health: " + MaxHealth;
+       }
 }
