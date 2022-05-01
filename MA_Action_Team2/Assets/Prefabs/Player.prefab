@@ -77,7 +77,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1232901615963677021
 Transform:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3626461331884690693
 Transform:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5698071994828072193
 Transform:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &114249506607361828
 Transform:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8551211383271809897}
   - component: {fileID: 7124650784120044564}
-  - component: {fileID: 8547786953152383331}
+  - component: {fileID: 7324391032294715150}
   m_Layer: 0
   m_Name: PlayerArt_Octolegs
   m_TagString: Untagged
@@ -860,8 +860,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 0ee6a42689d357a43aac6b7503b81d35, type: 3}
-  m_Color: {r: 0.8018868, g: 0.74773514, b: 0.28368637, a: 1}
+  m_Sprite: {fileID: 21300000, guid: eaa1b266d9e6646e7a1d7af179d0040a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -871,7 +871,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &8547786953152383331
+--- !u!95 &7324391032294715150
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ Animator:
   m_GameObject: {fileID: 7362532671524365111}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca8f1878fb560c447a8520b6bfddd76f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 10f36dc40b6f7446e935ee1efde3d7dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
