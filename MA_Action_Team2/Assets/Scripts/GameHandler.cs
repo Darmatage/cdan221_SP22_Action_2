@@ -7,13 +7,18 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-
+    public static bool mutation1enabled = false; // Head lamp
+    public static bool mutation2enabled = false; // Octopus legs
+    public static bool mutation3enabled = false; // Shark teeth
+    public static bool mutation4enabled = false; // Poison dart / range attack
 
     public static bool mutation1active = false; // Head lamp
     public static bool mutation2active = false; // Octopus legs
     public static bool mutation3active = false; // Shark teeth
     public static bool mutation4active = false; // Poison dart / range attack
 
+	//need stamina mechanic for using mutation?
+	public static float mutationStamina = 100f;
 
     private GameObject player;
 	
@@ -59,16 +64,25 @@ public class GameHandler : MonoBehaviour {
             //}
             updateStatsDisplay();
       }
-      void Update (){
-                      if (Input.GetKeyDown(KeyCode.Escape)){
-                              if (GameisPaused){
-                                      Resume();
-                              }
-                              else{
-                                      Pause();
-                              }
-                      }
-              }
+    
+	void Update (){
+		
+		if (mutation1active==false){
+			player.GetComponentInChildren<SpriteMask>().enabled = false;
+		} else {
+			player.GetComponentInChildren<SpriteMask>().enabled = true;
+		}
+		
+		
+		if (Input.GetKeyDown(KeyCode.Escape)){
+            if (GameisPaused){
+                Resume();
+            }
+            else{
+                Pause();
+            }
+        }
+    }
 
 	void Pause(){
 		pauseMenuUI.SetActive(true);
