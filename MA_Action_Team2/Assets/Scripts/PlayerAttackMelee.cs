@@ -13,10 +13,12 @@ public class PlayerAttackMelee : MonoBehaviour{
       public LayerMask enemyLayers;
 
       void Start(){
-           animator = gameObject.GetComponentInChildren<Animator>();
+           //animator = gameObject.GetComponentInChildren<Animator>();
       }
 
       void Update(){
+		  animator = GameHandler.CurrentPlayerAnimator;
+		  
            if (Time.time >= nextAttackTime){
                   if (Input.GetKeyDown(KeyCode.Space))
                  if (Input.GetAxis("Attack") > 0){

@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour {
 
-      public Animator animator;
-      public Rigidbody2D rb;
-      public float jumpForce = 20f;
-      public Transform feet;
-      public LayerMask groundLayer;
-      public LayerMask enemyLayer;
-      public bool isAlive = true;
-      //public AudioSource JumpSFX;
+    public Animator animator;
+    public Rigidbody2D rb;
+    public float jumpForce = 20f;
+    public Transform feet;
+    public LayerMask groundLayer;
+    public LayerMask enemyLayer;
+    public bool isAlive = true;
+    //public AudioSource JumpSFX;
 
-      void Start(){
-            animator = gameObject.GetComponentInChildren<Animator>();
-            rb = GetComponent<Rigidbody2D>();
-      }
 
-     void Update() {
+	void Start(){
+		//animator = gameObject.GetComponentInChildren<Animator>();
+		rb = GetComponent<Rigidbody2D>();
+	}
+
+    void Update() {
+		
+		animator = GameHandler.CurrentPlayerAnimator;
+		 
+		 
            if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive==true)) {
                   Jump();
                 animator.SetTrigger("Jump");

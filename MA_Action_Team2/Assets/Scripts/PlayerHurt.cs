@@ -8,9 +8,14 @@ public class PlayerHurt: MonoBehaviour{
       public Rigidbody2D rb2D;
 
       void Start(){
-           animator = gameObject.GetComponentInChildren<Animator>();
+           //animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
       }
+
+	void Update(){
+		animator = GameHandler.CurrentPlayerAnimator;
+	}
+		
 
       public void playerHit(){
             animator.SetTrigger ("GetHurt");

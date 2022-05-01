@@ -8,19 +8,25 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
     public static bool mutation1enabled = false; // Head lamp
-    public static bool mutation2enabled = false; // Octopus legs
-    public static bool mutation3enabled = false; // Shark teeth
-    public static bool mutation4enabled = false; // Poison dart / range attack
+    public static bool mutation2enabled = false; // Shark teeth
+    public static bool mutation3enabled = false; // Octopus legs
+    public static bool mutation4enabled = false; // RockFish Poison dart / range attack
 
-    public static bool mutation1active = false; // Head lamp
-    public static bool mutation2active = false; // Octopus legs
-    public static bool mutation3active = false; // Shark teeth
-    public static bool mutation4active = false; // Poison dart / range attack
+    public static bool mutation1active = false; 
+    public static bool mutation2active = false; 
+    public static bool mutation3active = false; 
+    public static bool mutation4active = false; 
+
+	public GameObject mutationIcon1;
+	public GameObject mutationIcon2;
+	public GameObject mutationIcon3;
+	public GameObject mutationIcon4;
 
 	//need stamina mechanic for using mutation?
 	public static float mutationStamina = 100f;
 
-    private GameObject player;
+    public GameObject player;
+	public static Animator CurrentPlayerAnimator;
 	
     public static int playerHealth = 100;
     public int StartPlayerHealth = 100;
@@ -47,6 +53,8 @@ public class GameHandler : MonoBehaviour {
 
 	void Awake (){
 		SetLevel (volumeLevel);
+		player = GameObject.FindWithTag("Player");
+		
 		GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
 		if (sliderTemp != null){
 			sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
@@ -54,24 +62,41 @@ public class GameHandler : MonoBehaviour {
 		}
 	}
 	void Start(){
+		mutationIcon1.SetActive(false);
+		mutationIcon2.SetActive(false);
+		mutationIcon3.SetActive(false);
+		mutationIcon4.SetActive(false);
+		
+		CurrentPlayerAnimator = player.GetComponent<PlayerMove>().p0anim;
+		
         pauseMenuUI.SetActive(false);
         GameisPaused = false;
-            player = GameObject.FindWithTag("Player");
-            sceneName = SceneManager.GetActiveScene().name;
+            
+		sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-                  playerHealth = StartPlayerHealth;
-				  gotMutagens = startMutagens;
+		playerHealth = StartPlayerHealth;
+		gotMutagens = startMutagens;
             //}
-            updateStatsDisplay();
+		updateStatsDisplay();
       }
     
 	void Update (){
 		
+		//Power Icons:
+		if (mutation1enabled == true){mutationIcon1.SetActive(true);}
+		if (mutation2enabled == true){mutationIcon2.SetActive(true);}
+		if (mutation3enabled == true){mutationIcon3.SetActive(true);}
+		if (mutation4enabled == true){mutationIcon4.SetActive(true);}
+		
+		//power #1: enable SpriteMask to see in the dark
 		if (mutation1active==false){
 			player.GetComponentInChildren<SpriteMask>().enabled = false;
 		} else {
 			player.GetComponentInChildren<SpriteMask>().enabled = true;
 		}
+		
+		
+		
 		
 		
 		if (Input.GetKeyDown(KeyCode.Escape)){
@@ -123,19 +148,35 @@ public class GameHandler : MonoBehaviour {
 		}
 	}
 
-      public void updateStatsDisplay(){
+	public void TakeDamage(int damage){
+              CurrentHealth -= damage;
+              UpdateHealth();
+              sceneName = SceneManager.GetActiveScene().name;
+              if (CurrentHealth >= MaxHealth){CurrentHealth = MaxHealth;}
+              if ((CurrentHealth <= 0) && (sceneName != "EndLose")){
+                     SceneManager.LoadScene("EndLose");
+              }
+       }
+
+	public void UpdateHealth(){
+              Text healthTextB = healthText.GetComponent<Text>();
+              healthTextB.text = "Current Health: " + CurrentHealth + "\n Max Health: " + MaxHealth;
+       }
+
+
+	public void updateStatsDisplay(){
             Text healthTextTemp = healthText.GetComponent<Text>();
             healthTextTemp.text = "Health: " + playerHealth;
 
             Text tokensTextTemp = tokensText.GetComponent<Text>();
-            tokensTextTemp.text = "Mutagens: " + gotMutagens;
+            tokensTextTemp.text = "Mutations: " + gotMutagens;
       }
       public void playerDies(){
             player.GetComponent<PlayerHurt>().playerDead();
             StartCoroutine(DeathPause());
       }
 
-      IEnumerator DeathPause(){
+	IEnumerator DeathPause(){
             player.GetComponent<PlayerMove>().isAlive = false;
             player.GetComponent<PlayerJump>().isAlive = false;
             yield return new WaitForSeconds(1.0f);
@@ -164,18 +205,5 @@ public class GameHandler : MonoBehaviour {
             SceneManager.LoadScene("Credits");
       }
 	  
-	   public void TakeDamage(int damage){
-              CurrentHealth -= damage;
-              UpdateHealth();
-              sceneName = SceneManager.GetActiveScene().name;
-              if (CurrentHealth >= MaxHealth){CurrentHealth = MaxHealth;}
-              if ((CurrentHealth <= 0) && (sceneName != "EndLose")){
-                     SceneManager.LoadScene("EndLose");
-              }
-       }
 
-       public void UpdateHealth(){
-              Text healthTextB = healthText.GetComponent<Text>();
-              healthTextB.text = "Current Health: " + CurrentHealth + "\n Max Health: " + MaxHealth;
-       }
 }
