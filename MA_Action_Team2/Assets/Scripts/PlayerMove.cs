@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour {
 	void Start(){
 		//animator = gameObject.GetComponentInChildren<Animator>();
 		rb2D = transform.GetComponent<Rigidbody2D>();
+		climbable = LayerMask.NameToLayer("Climbable");
 	}
 
 	void Update(){

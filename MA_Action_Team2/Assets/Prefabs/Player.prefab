@@ -297,8 +297,8 @@ MonoBehaviour:
   canClimbNow: 0
   p0anim: {fileID: 1232901615963677019}
   p1anim: {fileID: 7386449173878648549}
-  p2anim: {fileID: 7324391032294715150}
-  p3anim: {fileID: 4812895139824631448}
+  p2anim: {fileID: 4812895139824631448}
+  p3anim: {fileID: 7324391032294715150}
   p4anim: {fileID: 2430973349380610170}
 --- !u!114 &1232901616195454577
 MonoBehaviour:
