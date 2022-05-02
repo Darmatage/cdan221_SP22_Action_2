@@ -115,8 +115,9 @@ GameObject:
   - component: {fileID: 6632196284348779757}
   - component: {fileID: 6632196284348779756}
   - component: {fileID: 6632196284348779759}
+  - component: {fileID: 582550531229351335}
   m_Layer: 7
-  m_Name: SquidPatrol
+  m_Name: Enemy_SquidPatrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,6 +205,22 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 6632196285184619248}
   damage: 10
+--- !u!114 &582550531229351335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632196284348779763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba1bd876c3e9da4ab95060e980790ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  healthLoot: {fileID: 8656293781595869630, guid: 60ed0f59fc27cb74d9b36493267e5be0, type: 3}
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &6632196285184619255
 GameObject:
   m_ObjectHideFlags: 0

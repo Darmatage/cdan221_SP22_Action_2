@@ -15,14 +15,17 @@ public class PlayerAttackShoot : MonoBehaviour{
            //animator = gameObject.GetComponentInChildren<Animator>();
       }
 
-      void Update(){
-           if (Time.time >= nextAttackTime){
-                  //if (Input.GetKeyDown(KeyCode.Space))
-                 if (Input.GetAxis("AttackShoot") > 0){
-                        playerFire();
-                        nextAttackTime = Time.time + 1f / attackRate;
-                  }
-            }
+	void Update(){
+		if (Time.time >= nextAttackTime){
+			//if (Input.GetKeyDown(KeyCode.Space))
+			if (Input.GetAxis("Attack") > 0){
+				if (GameHandler.mutation4active == true){
+					playerFire();
+					Debug.Log("I hit the shoot button");
+				}
+				nextAttackTime = Time.time + 1f / attackRate;
+			}
+		}
       }
 
       void playerFire(){

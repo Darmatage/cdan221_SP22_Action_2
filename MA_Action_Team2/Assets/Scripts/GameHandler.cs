@@ -29,7 +29,7 @@ public class GameHandler : MonoBehaviour {
 	public static Animator CurrentPlayerAnimator;
 	
     public static int playerHealth = 100;
-    public int StartPlayerHealth = 100;
+    public int maxHealth = 100;
     public GameObject healthText;
 	public static int gotMutagens = 0;
 	public int startMutagens = 100;
@@ -45,11 +45,7 @@ public class GameHandler : MonoBehaviour {
     public AudioMixer mixer;
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
-    
-	
-	//TakeDamage
-	 public static int MaxHealth = 100;
-     public static int CurrentHealth = 100;
+
 
 	void Awake (){
 		SetLevel (volumeLevel);
@@ -74,7 +70,7 @@ public class GameHandler : MonoBehaviour {
             
 		sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-		playerHealth = StartPlayerHealth;
+		playerHealth = maxHealth;
 		gotMutagens = startMutagens;
             //}
 		updateStatsDisplay();
@@ -95,10 +91,7 @@ public class GameHandler : MonoBehaviour {
 			player.GetComponentInChildren<SpriteMask>().enabled = true;
 		}
 		
-		
-		
-		
-		
+		//pause menu
 		if (Input.GetKeyDown(KeyCode.Escape)){
             if (GameisPaused){
                 Resume();
@@ -136,32 +129,26 @@ public class GameHandler : MonoBehaviour {
 	public void playerGetHit(int damage){
 		if (isDefending == false){
 			playerHealth -= damage;
-			if (playerHealth >=0){
-				updateStatsDisplay();
-			}
-			player.GetComponent<PlayerHurt>().playerHit();
+			if (playerHealth >= maxHealth){playerHealth = maxHealth;}
+			if (playerHealth >=0){updateStatsDisplay();}
+			if (damage > 0){player.GetComponent<PlayerHurt>().playerHit();}
 		}
 
-		if (playerHealth >= StartPlayerHealth){
-			playerHealth = StartPlayerHealth;
-			updateStatsDisplay();
+		sceneName = SceneManager.GetActiveScene().name;
+		if ((playerHealth <= 0) && (sceneName != "SceneLose")){
+			SceneManager.LoadScene("SceneLose");
 		}
+
+		// if (playerHealth >= StartPlayerHealth){
+			// playerHealth = StartPlayerHealth;
+			// updateStatsDisplay();
+		// }
 	}
 
-	public void TakeDamage(int damage){
-              CurrentHealth -= damage;
-              UpdateHealth();
-              sceneName = SceneManager.GetActiveScene().name;
-              if (CurrentHealth >= MaxHealth){CurrentHealth = MaxHealth;}
-              if ((CurrentHealth <= 0) && (sceneName != "SceneLose")){
-                     SceneManager.LoadScene("SceneLose");
-              }
-       }
-
-	public void UpdateHealth(){
-              Text healthTextB = healthText.GetComponent<Text>();
-              healthTextB.text = "Current Health: " + CurrentHealth + "\n Max Health: " + MaxHealth;
-       }
+	// public void UpdateHealth(){
+              // Text healthTextB = healthText.GetComponent<Text>();
+              // healthTextB.text = "Health: " + playerHealth + "\n Max Health: " + maxHealth;
+	// }
 
 
 	public void updateStatsDisplay(){
@@ -180,7 +167,7 @@ public class GameHandler : MonoBehaviour {
             player.GetComponent<PlayerMove>().isAlive = false;
             player.GetComponent<PlayerJump>().isAlive = false;
             yield return new WaitForSeconds(1.0f);
-            SceneManager.LoadScene("EndLose");
+            SceneManager.LoadScene("SceneLose");
       }
 	  
       public void StartGame() {
@@ -190,7 +177,7 @@ public class GameHandler : MonoBehaviour {
       public void RestartGame() {
             Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
-            playerHealth = StartPlayerHealth;
+            playerHealth = maxHealth;
       }
 
       public void QuitGame() {

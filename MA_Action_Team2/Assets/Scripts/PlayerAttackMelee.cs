@@ -16,17 +16,18 @@ public class PlayerAttackMelee : MonoBehaviour{
            //animator = gameObject.GetComponentInChildren<Animator>();
       }
 
-      void Update(){
-		  animator = GameHandler.CurrentPlayerAnimator;
-		  
-           if (Time.time >= nextAttackTime){
-                  if (Input.GetKeyDown(KeyCode.Space))
-                 if (Input.GetAxis("Attack") > 0){
-                        Attack();
-                        nextAttackTime = Time.time + 1f / attackRate;
-                  } 
-            }
-      }
+	void Update(){
+		animator = GameHandler.CurrentPlayerAnimator;  
+		
+		if (Time.time >= nextAttackTime){
+			if (Input.GetAxis("Attack") > 0){
+				if (GameHandler.mutation4active == false){
+					Attack();
+				}
+				nextAttackTime = Time.time + 1f / attackRate;
+			} 
+		}
+	}
 
       void Attack(){
             animator.SetTrigger ("Melee");
