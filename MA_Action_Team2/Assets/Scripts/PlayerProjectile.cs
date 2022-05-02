@@ -1,0 +1,35 @@
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
+
+public class PlayerProjectile : MonoBehaviour{
+
+      public int damage = 1;
+      public GameObject hitEffectAnim;
+      public float SelfDestructTime = 2.0f;
+      public SpriteRenderer projectileArt;
+
+      void Start(){
+           projectileArt = GetComponentInChildren<SpriteRenderer>();
+      }
+
+      //if the bullet hits a collider, play the explosion animation, then destroy the effect and the bullet
+      void OnTriggerEnter2D(Collider2D other){
+            if (other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
+                  //gameHandlerObj.playerGetHit(damage);
+                  other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
+            }
+           if (other.gameObject.tag != "Player") {
+                  GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
+                  projectileArt.enabled = false;
+                  //Destroy (animEffect, 0.5);
+                  StartCoroutine(selfDestruct(animEffect));
+            }
+      }
+
+      IEnumerator selfDestruct(GameObject VFX){
+            yield return new WaitForSeconds(SelfDestructTime);
+            Destroy (VFX);
+            Destroy (gameObject);
+      }
+}

@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 209464932a6a91e479c271787ed221ca
+guid: e6885d4dc838f934c8cfcfce40e22416
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -1803090992938916251
-    second: stonefish_damage_0
-  - first:
-      213: -5655896206919602170
-    second: stonefish_damage_1
-  - first:
-      213: -8036929586140288857
-    second: stonefish_damage_2
-  - first:
-      213: 466702467306391199
-    second: stonefish_damage_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,91 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: stonefish_damage_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5666b2c8b422af6e0800000000000000
-      internalID: -1803090992938916251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stonefish_damage_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 600f314bd583281b0800000000000000
-      internalID: -5655896206919602170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stonefish_damage_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a8e7457f17177090800000000000000
-      internalID: -8036929586140288857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stonefish_damage_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f96889bdb6f0a7600800000000000000
-      internalID: 466702467306391199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
