@@ -18,7 +18,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       void Update(){
            if (Time.time >= nextAttackTime){
                   //if (Input.GetKeyDown(KeyCode.Space))
-                 if (Input.GetAxis("Attack") > 0){
+                 if (Input.GetAxis("AttackShoot") > 0){
                         playerFire();
                         nextAttackTime = Time.time + 1f / attackRate;
                   }

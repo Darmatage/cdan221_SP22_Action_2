@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6632196283668613224}
   - component: {fileID: 6632196283668613225}
   - component: {fileID: 5803500931726127605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Squid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 6632196284348779757}
   - component: {fileID: 6632196284348779756}
   - component: {fileID: 6632196284348779759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SquidPatrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a1efc459b177c4eb6592913c4fc44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   rb: {fileID: 0}
   groundLayers:
     serializedVersion: 2
@@ -213,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6632196285184619248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

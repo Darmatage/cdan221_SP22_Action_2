@@ -7,7 +7,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       //public Animator animator;
       public Transform firePoint;
       public GameObject projectilePrefab;
-      public float projectileSpeed = 10f
+      public float projectileSpeed = 10f;
       public float attackRate = 2f;
       private float nextAttackTime = 0f;
 

@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour {
+public class PlayerProjectile : MonoBehaviour{
 
       public int damage = 1;
       public GameObject hitEffectAnim;
-      public float SelfDestructTime = 2.0f;
+      public float SelfDestructTime = 2f;
       public SpriteRenderer projectileArt;
 
       void Start(){
@@ -14,7 +14,7 @@ public class PlayerProjectile : MonoBehaviour {
       }
 
       //if the bullet hits a collider, play the explosion animation, then destroy the effect and the bullet
-      void OnTriggerEnter2D(Collider2D other){
+      void OnCollisionEnter2D(Collider2D other){
             if (other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
                   //gameHandlerObj.playerGetHit(damage);
                   other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
