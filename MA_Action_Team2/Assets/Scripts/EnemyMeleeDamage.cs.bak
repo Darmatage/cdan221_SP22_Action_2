@@ -20,7 +20,7 @@ public class EnemyMeleeDamage : MonoBehaviour {
 		currentHealth -= damage;
 		rend.material.color = new Color(2.4f, 0.9f, 0.9f, 1f);
 		StartCoroutine(ResetColor());
-		anim.SetTrigger ("GetHurt");
+		anim.SetTrigger ("Hurt");
 		if (currentHealth <= 0){
 			Die();
 		}
