@@ -23,7 +23,8 @@ public class PlayerRespawn : MonoBehaviour {
        }
 
        public void OnTriggerEnter2D(Collider2D other) {
-              if (other.gameObject.tag == "CheckPoint"){
+              if (other.gameObject.tag == "Checkpoint"){
+				  Debug.Log("My new checkpoint location is " + other.gameObject.name + " " + other.gameObject.transform.position);
                             pSpawn = other.gameObject.transform;
                             GameObject thisCheckpoint = other.gameObject;
                             StopCoroutine(changeColor(thisCheckpoint));
