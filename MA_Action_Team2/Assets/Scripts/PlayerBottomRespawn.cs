@@ -6,7 +6,7 @@ public class PlayerBottomRespawn : MonoBehaviour {
 
        public GameHandler gameHandler;
        public Transform playerPos;
-       public Transform pSpawn;
+       public Transform pSpawnFall; //starting position
        public int damage = 10;
 
        void Start() {
@@ -14,15 +14,16 @@ public class PlayerBottomRespawn : MonoBehaviour {
               gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
        }
 
-       void Update() {
-              if (playerPos != null){
-                     if (transform.position.y >= playerPos.position.y){
-                            //instantiate a particle effect
-                            Debug.Log("I am going back to the start");
-                            gameHandler.playerGetHit(damage);
-                            Vector3 pSpn2 = new Vector3(pSpawn.position.x, pSpawn.position.y, playerPos.position.z);
-                            playerPos.position = pSpn2;
-                     }
-              }
-       }
+	void Update() {
+		if (playerPos != null){
+			pSpawnFall = playerPos.gameObject.GetComponent<PlayerRespawn>().pSpawn;  	  
+			if (transform.position.y >= playerPos.position.y){
+				//instantiate a particle effect
+				Debug.Log("I am going back to the start");
+				gameHandler.playerGetHit(damage);
+				Vector3 pSpn2 = new Vector3(pSpawnFall.position.x, pSpawnFall.position.y, playerPos.position.z);
+				playerPos.position = pSpn2;
+			}
+		}
+	}
 }
