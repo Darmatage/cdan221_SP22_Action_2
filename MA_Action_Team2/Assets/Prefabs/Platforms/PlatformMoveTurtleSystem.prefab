@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 4053171377625743012}
   - component: {fileID: 4053171377625743015}
   - component: {fileID: 4053171377625743014}
-  - component: {fileID: 4053171377625743013}
+  - component: {fileID: 6571096127835632136}
   m_Layer: 6
   m_Name: PlatformMoving
   m_TagString: Untagged
@@ -184,7 +184,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4053171377625743013
+--- !u!114 &6571096127835632136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,19 +193,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4053171377625743035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4501289b9cdd7424c918c0d004ff635a, type: 3}
+  m_Script: {fileID: 11500000, guid: 317a40a75e52faf4b94ebca84fed0c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  startWaitTime: 2
-  moveSpots:
-  - {fileID: 4053171378887396553}
-  - {fileID: 4053171378542360398}
-  startSpot: 0
-  moveForward: 1
-  nextSpot: 0
-  previousSpot: 0
-  faceRight: 1
+  moveTargetA: {fileID: 0}
+  moveTargetB: {fileID: 0}
 --- !u!1 &4053171378542360397
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053171378542360398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveTargetB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053171378885342701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatformMoveTurtleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053171378887396553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveTargetA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
