@@ -11,9 +11,18 @@ public class MutationNode : MonoBehaviour{
 	public bool isMutation3 = false;
 	public bool isMutation4 = false;
 
+	public AudioSource mutationSFX;
+
+	void Start(){
+		mutationSFX = GetComponent<AudioSource>();
+	}
+
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Player"){
+			mutationSFX.Play();
+			StartCoroutine(destroyMutationNode());
+			
 			if (isMutation1){
 				GameHandler.mutation1enabled = true;
 				GameHandler.mutation1active = true;
@@ -35,8 +44,15 @@ public class MutationNode : MonoBehaviour{
 				GameHandler.mutation4active = true;
 				GameHandler.mutationStamina = 100f;
 				}
+		
 		}
     }
+	
+	IEnumerator destroyMutationNode(){
+		yield return new WaitForSeconds(0.5f);
+		Destroy (gameObject);
+	}
+	
 	
 	//NOTE: to help see the attack sphere in editor:
     // void OnDrawGizmos(){
