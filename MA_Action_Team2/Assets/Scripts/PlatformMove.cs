@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlatformMove : MonoBehaviour {
 
-       private float speed = 5f;
-       private bool moveToA = true;
-       public Transform moveTargetA;
-       public Transform moveTargetB;
-       private Vector3 mTA;
-       private Vector3 mTB;
+	private float speed = 5f;
+	private bool moveToA = true;
+	public Transform moveTargetA;
+	public Transform moveTargetB;
+	private Vector3 mTA;
+	private Vector3 mTB;
+
+	public bool isHorizontal = false;
+
 
        void FixedUpdate(){
               mTA = new Vector3(moveTargetA.position.x, moveTargetA.position.y, 0);
@@ -22,8 +25,8 @@ public class PlatformMove : MonoBehaviour {
                      transform.position = Vector3.MoveTowards(transform.position, mTB, step);
               }
 
-              if (Vector3.Distance(moveTargetA.position, transform.position) < 1){moveToA = false;}
-              else if (Vector3.Distance(moveTargetB.position, transform.position) < 1){moveToA = true;}
+              if (Vector3.Distance(moveTargetA.position, transform.position) < 1){moveToA = false; turn();}
+              else if (Vector3.Distance(moveTargetB.position, transform.position) < 1){moveToA = true; turn();}
        }
 
        void OnCollisionEnter2D(Collision2D other){
@@ -37,5 +40,14 @@ public class PlatformMove : MonoBehaviour {
                      other.collider.transform.SetParent(null);        // Player not parented when off platform
               }
        }
+
+	void turn(){
+		if (isHorizontal){
+			Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+		}
+	}
+
 
 }
