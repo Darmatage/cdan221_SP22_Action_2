@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 6632196284348779756}
   - component: {fileID: 5937646891834753814}
   - component: {fileID: 582550531229351335}
+  - component: {fileID: 7207461445654480988}
   m_Layer: 7
   m_Name: Enemy_Shark
   m_TagString: Untagged
@@ -180,7 +181,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -224,6 +225,26 @@ MonoBehaviour:
   healthLoot: {fileID: 8656293781595869630, guid: 60ed0f59fc27cb74d9b36493267e5be0, type: 3}
   maxHealth: 100
   currentHealth: 50
+--- !u!114 &7207461445654480988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632196284348779763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a1efc459b177c4eb6592913c4fc44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  speed: 2
+  rb: {fileID: 0}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  groundCheck: {fileID: 0}
+  damage: 20
 --- !u!1 &6632196285184619255
 GameObject:
   m_ObjectHideFlags: 0
