@@ -196,8 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317a40a75e52faf4b94ebca84fed0c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTargetA: {fileID: 0}
-  moveTargetB: {fileID: 0}
+  moveTargetA: {fileID: 4053171378887396553}
+  moveTargetB: {fileID: 4053171378542360398}
+  isHorizontal: 0
 --- !u!1 &4053171378542360397
 GameObject:
   m_ObjectHideFlags: 0
