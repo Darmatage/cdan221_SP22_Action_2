@@ -20,7 +20,7 @@ public class BubbleMove : MonoBehaviour{
 	private float randLeft = 0.06f;
 	private float randRight = 0.1f;
 
-	//private bool SinWaveMove = true;
+	private bool SinWaveMove = true;
 	private bool randomizeSin = true;
 	
 	
