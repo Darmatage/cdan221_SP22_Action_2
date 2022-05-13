@@ -299,7 +299,7 @@ MonoBehaviour:
   canClimbNow: 0
   p0anim: {fileID: 1232901615963677019}
   p1anim: {fileID: 7386449173878648549}
-  p2anim: {fileID: 4812895139824631448}
+  p2anim: {fileID: 4756641404994073231}
   p3anim: {fileID: 7324391032294715150}
   p4anim: {fileID: 2430973349380610170}
 --- !u!114 &1232901616195454577
@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3626461331884690693}
   - component: {fileID: 1598401862364529945}
-  - component: {fileID: 4812895139824631448}
+  - component: {fileID: 4756641404994073231}
   m_Layer: 0
   m_Name: PlayerArt_SharkTeeth
   m_TagString: Untagged
@@ -587,7 +587,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4812895139824631448
+--- !u!95 &4756641404994073231
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ Animator:
   m_GameObject: {fileID: 4014649764606411822}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca8f1878fb560c447a8520b6bfddd76f, type: 2}
+  m_Controller: {fileID: 9100000, guid: a42669802cde19e4aa2842c6f520304d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
