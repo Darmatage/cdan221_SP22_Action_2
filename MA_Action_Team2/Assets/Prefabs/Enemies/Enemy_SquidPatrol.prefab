@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a1efc459b177c4eb6592913c4fc44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   speed: 5
   rb: {fileID: 0}
   groundLayers:
@@ -218,9 +219,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  healthLoot: {fileID: 8656293781595869630, guid: 60ed0f59fc27cb74d9b36493267e5be0, type: 3}
+  healthLoot: {fileID: 766432169613993589, guid: 001d45b338dfe524495cc4b2c630701e, type: 3}
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 50
 --- !u!1 &6632196285184619255
 GameObject:
   m_ObjectHideFlags: 0
