@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4594350536964611219}
   - component: {fileID: 7984455700734696952}
   - component: {fileID: 3100585188661456442}
+  - component: {fileID: 5685076750758792357}
   m_Layer: 0
   m_Name: Enemy_Sunfish
   m_TagString: Untagged
@@ -204,3 +205,19 @@ MonoBehaviour:
   nextSpot: 0
   previousSpot: 0
   faceRight: 1
+--- !u!114 &5685076750758792357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313083699905204315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba1bd876c3e9da4ab95060e980790ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  healthLoot: {fileID: 8656293781595869630, guid: 60ed0f59fc27cb74d9b36493267e5be0, type: 3}
+  maxHealth: 100
+  currentHealth: 30

@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 3615268331380712171}
   - component: {fileID: 3615268331380712172}
   - component: {fileID: 6157110957860934768}
+  - component: {fileID: 7815631708909350087}
   m_Layer: 0
   m_Name: Enemy_Stonefish
   m_TagString: Untagged
@@ -204,3 +205,19 @@ MonoBehaviour:
   nextSpot: 0
   previousSpot: 0
   faceRight: 1
+--- !u!114 &7815631708909350087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615268331380712173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba1bd876c3e9da4ab95060e980790ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  healthLoot: {fileID: 766432169613993589, guid: bd17a6eab75f5934f85eb96ff204d2b4, type: 3}
+  maxHealth: 100
+  currentHealth: 50
