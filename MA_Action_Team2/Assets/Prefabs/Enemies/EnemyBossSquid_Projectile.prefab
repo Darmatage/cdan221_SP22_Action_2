@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8454075128919780340}
   - component: {fileID: 5481018693735575326}
   m_Layer: 0
-  m_Name: EnemySquid_Projectile
+  m_Name: EnemyBossSquid_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
