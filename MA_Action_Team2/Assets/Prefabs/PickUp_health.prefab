@@ -158,7 +158,7 @@ MonoBehaviour:
   gameHandler: {fileID: 0}
   isHealthPickUp: 1
   isMutagenPickUp: 0
-  healthBoost: 10
+  healthBoost: 1
   mutagens: 1
 --- !u!114 &902105234258243469
 MonoBehaviour:
