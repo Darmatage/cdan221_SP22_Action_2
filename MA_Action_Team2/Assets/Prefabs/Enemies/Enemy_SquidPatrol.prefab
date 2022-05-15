@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  healthLoot: {fileID: 766432169613993589, guid: 001d45b338dfe524495cc4b2c630701e, type: 3}
+  healthLoot: {fileID: 766432169613993589, guid: 843a455833f0ffe499528dbf012bbec9, type: 3}
   maxHealth: 100
   currentHealth: 50
 --- !u!1 &6632196285184619255
