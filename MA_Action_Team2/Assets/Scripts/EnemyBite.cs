@@ -11,7 +11,7 @@ public class EnemyBite : MonoBehaviour{
 	public Transform AttackPoint;
 	public float attackRange = 5f;
 	public float damageRange = 7f;
-	public LayerMask playerLayers;
+	//public LayerMask playerLayer;
 
 	public int damage = 10;
 	float distanceToMouth;
@@ -43,7 +43,7 @@ public class EnemyBite : MonoBehaviour{
 			gameHandler.playerGetHit(damage);
 		}
 		
-		// Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(AttackPoint.position, damageRange, playerLayers);
+		// Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(AttackPoint.position, damageRange, playerLayer);
            
 		// foreach(Collider2D player in hitPlayer){
 			// Debug.Log("We hit " + player.name);
