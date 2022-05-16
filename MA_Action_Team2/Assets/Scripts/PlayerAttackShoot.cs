@@ -12,7 +12,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       private float nextAttackTime = 0f;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           animator = gameObject.GetComponentInChildren<Animator>();
       }
 
 	void Update(){

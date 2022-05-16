@@ -13,7 +13,7 @@ public class PlayerAttackMelee : MonoBehaviour{
       public LayerMask enemyLayers;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           animator = gameObject.GetComponentInChildren<Animator>();
       }
 
 	void Update(){
