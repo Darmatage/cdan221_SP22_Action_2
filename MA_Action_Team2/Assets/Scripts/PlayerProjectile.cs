@@ -17,16 +17,22 @@ public class PlayerProjectile : MonoBehaviour{
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
 			//gameHandlerObj.playerGetHit(damage);
-			other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);
-				  
-			float pushBack = 0f;
-			if (transform.position.x < other.gameObject.transform.position.x){
-				pushBack = 3f;
-			}else {
-				pushBack = -3f;
+			
+			if (other.gameObject.tag == "BigBoss"){	
+			other.gameObject.GetComponent<BigBoss_MeleeDamage>().TakeDamage(damage);
 			}
-			Vector2 otherPos = new Vector2(other.gameObject.transform.position.x, other.gameObject.transform.position.y);
-			other.gameObject.transform.position = new Vector3(otherPos.x + pushBack, otherPos.y + 1f, 0);
+			else {other.gameObject.GetComponent<EnemyMeleeDamage>().TakeDamage(damage);}
+			
+			if (other.gameObject.tag != "BigBoss"){
+				float pushBack = 0f;
+				if (transform.position.x < other.gameObject.transform.position.x){
+					pushBack = 3f;
+				}else {
+					pushBack = -3f;
+				}
+				Vector2 otherPos = new Vector2(other.gameObject.transform.position.x, other.gameObject.transform.position.y);
+				other.gameObject.transform.position = new Vector3(otherPos.x + pushBack, otherPos.y + 1f, 0);
+			}
 		}
         
 		if (other.gameObject.tag != "Player") {
