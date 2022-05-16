@@ -25,6 +25,7 @@ public class PlayerMutations : MonoBehaviour
 
     void Update(){
         
+		//angler light
 		if (GameHandler.mutation1active == true){
 			art_default.SetActive(false);
 			art_EyeStalk.SetActive(true);
@@ -34,6 +35,7 @@ public class PlayerMutations : MonoBehaviour
 			GameHandler.CurrentPlayerAnimator = GetComponent<PlayerMove>().p1anim;
 		}
 		
+		//shark
 		else if (GameHandler.mutation2active == true){
 			art_default.SetActive(false);
 			art_EyeStalk.SetActive(false);
@@ -43,6 +45,7 @@ public class PlayerMutations : MonoBehaviour
 			GameHandler.CurrentPlayerAnimator = GetComponent<PlayerMove>().p2anim;
 		}
 		
+		//octolegs
 		else if (GameHandler.mutation3active == true){
 			art_default.SetActive(false);
 			art_EyeStalk.SetActive(false);
@@ -52,6 +55,7 @@ public class PlayerMutations : MonoBehaviour
 			GameHandler.CurrentPlayerAnimator = GetComponent<PlayerMove>().p3anim;
 		}
 		
+		//rockfish
 		else if (GameHandler.mutation4active == true){
 			art_default.SetActive(false);
 			art_EyeStalk.SetActive(false);
@@ -61,6 +65,7 @@ public class PlayerMutations : MonoBehaviour
 			GameHandler.CurrentPlayerAnimator = GetComponent<PlayerMove>().p4anim;
 		}
 		
+		//default player character state
 		else {
 			art_default.SetActive(true);
 			art_EyeStalk.SetActive(false);

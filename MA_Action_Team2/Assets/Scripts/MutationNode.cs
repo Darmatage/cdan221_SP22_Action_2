@@ -24,23 +24,36 @@ public class MutationNode : MonoBehaviour{
 			StartCoroutine(destroyMutationNode());
 			
 			if (isMutation1){
-				GameHandler.mutation1enabled = true;
+				//GameHandler.mutation1enabled = true;
 				GameHandler.mutation1active = true;
+				GameHandler.mutation2active = false;
+				GameHandler.mutation3active = false;
+				GameHandler.mutation4active = false;
+				
 				GameHandler.mutationStamina = 100f;
 				Debug.Log("mutation1 acquired!");
 				}
 			else if (isMutation2){
-				GameHandler.mutation2enabled = true;
+				//GameHandler.mutation2enabled = true;
+				GameHandler.mutation1active = false;
 				GameHandler.mutation2active = true;
+				GameHandler.mutation3active = false;
+				GameHandler.mutation4active = false;
 				GameHandler.mutationStamina = 100f;
 				}
 			else if (isMutation3){
-				GameHandler.mutation3enabled = true;
+				//GameHandler.mutation3enabled = true;
+				GameHandler.mutation1active = false;
+				GameHandler.mutation2active = false;
 				GameHandler.mutation3active = true;
+				GameHandler.mutation4active = false;
 				GameHandler.mutationStamina = 100f;
 				}
 			else if (isMutation4){
-				GameHandler.mutation4enabled = true;
+				//GameHandler.mutation4enabled = true;
+				GameHandler.mutation1active = false;
+				GameHandler.mutation2active = false;
+				GameHandler.mutation3active = false;
 				GameHandler.mutation4active = true;
 				GameHandler.mutationStamina = 100f;
 				}

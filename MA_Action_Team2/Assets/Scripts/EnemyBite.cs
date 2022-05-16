@@ -20,7 +20,7 @@ public class EnemyBite : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        gameHandler = GameObject.FindWithTag("GameHandler").GetComponentInChildren<GameHandler>();
+        gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 		anim = GetComponentInChildren<Animator>();
 		player = GameObject.FindWithTag("Player").transform;
 		

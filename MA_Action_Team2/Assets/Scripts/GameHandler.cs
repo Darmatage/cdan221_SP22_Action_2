@@ -7,10 +7,10 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-    public static bool mutation1enabled = false; // Head lamp
-    public static bool mutation2enabled = false; // Shark teeth
-    public static bool mutation3enabled = false; // Octopus legs
-    public static bool mutation4enabled = false; // RockFish Poison dart / range attack
+    //public static bool mutation1enabled = false; // Head lamp
+    //public static bool mutation2enabled = false; // Shark teeth
+    //public static bool mutation3enabled = false; // Octopus legs
+    //public static bool mutation4enabled = false; // RockFish Poison dart / range attack
 
     public static bool mutation1active = false; 
     public static bool mutation2active = false; 
@@ -79,10 +79,10 @@ public class GameHandler : MonoBehaviour {
 	void Update (){
 		
 		//Power Icons:
-		if (mutation1enabled == true){mutationIcon1.SetActive(true);}
-		if (mutation2enabled == true){mutationIcon2.SetActive(true);}
-		if (mutation3enabled == true){mutationIcon3.SetActive(true);}
-		if (mutation4enabled == true){mutationIcon4.SetActive(true);}
+		if (mutation1active == true){mutationIcon1.SetActive(true);}
+		if (mutation2active == true){mutationIcon2.SetActive(true);}
+		if (mutation3active == true){mutationIcon3.SetActive(true);}
+		if (mutation4active == true){mutationIcon4.SetActive(true);}
 		
 		//power #1: enable SpriteMask to see in the dark
 		if (mutation1active==false){
