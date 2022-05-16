@@ -156,6 +156,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySmall_SunfishPatrolPoints
       objectReference: {fileID: 0}
+    - target: {fileID: 7984455700734696952, guid: 029fbe11fb973a2458bd154befc0232b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4003134
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984455700734696952, guid: 029fbe11fb973a2458bd154befc0232b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6218033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984455700734696952, guid: 029fbe11fb973a2458bd154befc0232b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.020449907
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984455700734696952, guid: 029fbe11fb973a2458bd154befc0232b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.20193148
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 029fbe11fb973a2458bd154befc0232b, type: 3}
 --- !u!4 &2175585730288137325 stripped
