@@ -11,6 +11,8 @@ public class EnemyMoveShoot : MonoBehaviour {
        private float timeBtwShots;
        public float startTimeBtwShots = 2;
        public GameObject projectile;
+	   
+	   public Transform shootPoint;
 
        private Rigidbody2D rb;
        private Transform player;
@@ -83,7 +85,7 @@ public class EnemyMoveShoot : MonoBehaviour {
                      if (timeBtwShots <= 0) {
                             isAttacking = true;
                             //anim.SetTrigger("Attack");
-                            Instantiate (projectile, transform.position, Quaternion.identity);
+                            Instantiate (projectile, shootPoint.position, Quaternion.identity);
                             timeBtwShots = startTimeBtwShots;
                      } else {
                             timeBtwShots -= Time.deltaTime;

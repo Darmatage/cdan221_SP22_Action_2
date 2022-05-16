@@ -125,6 +125,7 @@ MonoBehaviour:
   retreatDistance: 3
   startTimeBtwShots: 2
   projectile: {fileID: 5981041056973855291, guid: 947746d5b7045694aa51050589eb1693, type: 3}
+  shootPoint: {fileID: 4257858273227598784}
   attackRange: 15
   isAttacking: 0
 --- !u!114 &1549040549972076850
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 1549040550753137895}
   - component: {fileID: 1549040550753137894}
   m_Layer: 7
-  m_Name: AnglerWalk
+  m_Name: Squid_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
