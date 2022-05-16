@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1639522607886025843}
   m_Layer: 0
-  m_Name: EnemyBossPatrol_Squid
+  m_Name: EnemyBossSquid_Patrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
