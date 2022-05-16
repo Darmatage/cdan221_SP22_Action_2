@@ -123,10 +123,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackPoint: {fileID: 417666580658698912}
   attackRange: 5
-  damage: 5
+  damageRange: 7
   playerLayers:
     serializedVersion: 2
     m_Bits: 512
+  damage: 10
+  timeToNextAttack: 2
+  canAttack: 1
 --- !u!114 &1549040549972076850
 MonoBehaviour:
   m_ObjectHideFlags: 0
