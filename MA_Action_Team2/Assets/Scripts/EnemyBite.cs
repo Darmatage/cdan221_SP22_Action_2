@@ -51,18 +51,18 @@ public class EnemyBite : MonoBehaviour{
 		// }
 	}
 	
-	//NOTE: to help see the attack sphere in editor:
-      void OnDrawGizmos(){
-            Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
-			Gizmos.DrawWireSphere(AttackPoint.position, damageRange);
-      }
-	  
-	  
+	
 	IEnumerator AttackDelay(){
 		canAttack = false;
 		yield return new WaitForSeconds(timeToNextAttack);
 		canAttack = true;
 	}
 	  
+	
+	//NOTE: to help see the attack sphere in editor:
+      void OnDrawGizmos(){
+            Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
+			Gizmos.DrawWireSphere(AttackPoint.position, damageRange);
+    }
 	
 }
