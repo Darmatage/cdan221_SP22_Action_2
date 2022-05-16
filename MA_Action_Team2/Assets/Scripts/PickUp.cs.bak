@@ -5,14 +5,13 @@ using UnityEngine;
 public class PickUp : MonoBehaviour{
 
       public GameHandler gameHandler;
-      //public playerVFX playerPowerupVFX;
+      public playerVFX playerPowerupVFX;
       public bool isHealthPickUp = true;
       public bool isMutagenPickUp = false;
 
       public int healthBoost = 50;
       public int mutagens = 1;
       //public float speedTime = 2f;
-	  public AudioSource pickupSFX;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -27,8 +26,7 @@ public class PickUp : MonoBehaviour{
 
                   if (isHealthPickUp == true) {
                         gameHandler.playerGetHit(healthBoost * -1);
-						pickupSFX.Play();
-                        //playerPowerupVFX.powerup();
+                        playerPowerupVFX.powerup();
                   }
 
                   if (isMutagenPickUp == true) {
