@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProjectileVFX_destroy : MonoBehaviour{
 	
+	public float destroyTime = 1f;
+	
 
     // Start is called before the first frame update
     void Start()
@@ -13,7 +15,7 @@ public class ProjectileVFX_destroy : MonoBehaviour{
 
     // Update is called once per frame
     IEnumerator DestroyMe(){
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(destroyTime);
         Destroy(gameObject);
 		
     }

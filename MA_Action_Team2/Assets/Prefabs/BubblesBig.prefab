@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9212744536404634927}
   - component: {fileID: 6011998894230861555}
   - component: {fileID: 1393352858969289120}
+  - component: {fileID: -3286245091220894614}
   m_Layer: 0
   m_Name: BubblesBig
   m_TagString: Untagged
@@ -116,3 +117,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811133a9a4d699f42a9f356a9530291b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToPop: 5
+  upSpeed: 1
+  speedS: 2.5
+  distS: 0.5
+--- !u!114 &-3286245091220894614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110871295334036174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0efc60bda84f3d4293a8977201c6ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 5
