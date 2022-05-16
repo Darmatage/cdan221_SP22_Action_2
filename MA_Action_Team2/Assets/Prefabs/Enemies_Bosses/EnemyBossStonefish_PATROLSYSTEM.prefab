@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBoss_Stonefish
       objectReference: {fileID: 0}
+    - target: {fileID: 1549040550753137894, guid: fe88a0b3f46afb641a37c62835f2d842, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ba18ac3dc8493b14e96cbfcfc4635fee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe88a0b3f46afb641a37c62835f2d842, type: 3}
 --- !u!4 &6401806963245396277 stripped

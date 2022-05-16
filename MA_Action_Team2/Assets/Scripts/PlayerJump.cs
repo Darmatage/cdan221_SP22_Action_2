@@ -11,11 +11,11 @@ public class PlayerJump : MonoBehaviour {
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
     public bool isAlive = true;
-    //public AudioSource JumpSFX;
+    public AudioSource JumpSFX;
 
 
 	void Start(){
-		//animator = gameObject.GetComponentInChildren<Animator>();
+		animator = gameObject.GetComponentInChildren<Animator>();
 		rb = GetComponent<Rigidbody2D>();
 	}
 
@@ -27,7 +27,7 @@ public class PlayerJump : MonoBehaviour {
            if ((Input.GetButtonDown("Jump")) && (IsGrounded()) && (isAlive==true)) {
                   Jump();
                 animator.SetTrigger("Jump");
-               // JumpSFX.Play();
+                JumpSFX.Play();
             } else {
 				animator.SetBool("Jump", false);
 			}
