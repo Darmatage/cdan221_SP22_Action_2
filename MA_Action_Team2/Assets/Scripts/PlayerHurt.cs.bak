@@ -20,7 +20,7 @@ public class PlayerHurt: MonoBehaviour{
 
       public void playerHit(){
             animator.SetTrigger ("GetHurt");
-			hitSFX.Play();
+			hitSFX.play();
       }
 
       public void playerDead(){

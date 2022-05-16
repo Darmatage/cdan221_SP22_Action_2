@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[1]
       value: 
       objectReference: {fileID: 8382318781387567163}
+    - target: {fileID: 7815631708909350087, guid: e0ed9c8366adb7740bf4ed6564cfe2f6, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ed9c8366adb7740bf4ed6564cfe2f6, type: 3}
 --- !u!4 &5927168210666987194 stripped

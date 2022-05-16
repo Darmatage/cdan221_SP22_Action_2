@@ -15,13 +15,13 @@ public class PickUp : MonoBehaviour{
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-            playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
+            //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
       }
 
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
                   GetComponent<Collider2D>().enabled = false;
-                  GetComponent<AudioSource>().Play();
+                  //GetComponent<AudioSource>().Play();
                   StartCoroutine(DestroyThis());
 
                   if (isHealthPickUp == true) {
@@ -32,7 +32,7 @@ public class PickUp : MonoBehaviour{
                   if (isMutagenPickUp == true) {
 						gameHandler.playerGetMutagens(mutagens);
                         //other.gameObject.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
-                        playerPowerupVFX.powerup();
+                        //playerPowerupVFX.powerup();
                   }
             }
       }

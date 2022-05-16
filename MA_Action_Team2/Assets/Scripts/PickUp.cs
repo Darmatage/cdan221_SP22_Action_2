@@ -12,6 +12,7 @@ public class PickUp : MonoBehaviour{
       public int healthBoost = 50;
       public int mutagens = 1;
       //public float speedTime = 2f;
+	  public AudioSource pickupSFX;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -26,6 +27,7 @@ public class PickUp : MonoBehaviour{
 
                   if (isHealthPickUp == true) {
                         gameHandler.playerGetHit(healthBoost * -1);
+						pickupSFX.Play();
                         //playerPowerupVFX.powerup();
                   }
 
