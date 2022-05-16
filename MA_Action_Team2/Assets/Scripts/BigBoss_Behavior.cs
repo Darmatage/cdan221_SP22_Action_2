@@ -22,9 +22,6 @@ public class BigBoss_Behavior : MonoBehaviour{
 	public BigBoss_PlayerCanGetHit TailCollider;
 	public CameraScreenShake cameraScreenShake;
 
-	//public GameObject welcomeMSG;
-	//public GameObject goodbyeMSG;
-
 	//private float bossTimer = 0;
 	private float roarTimer=0;  
 	private float biteTimer=0; 	
@@ -33,14 +30,14 @@ public class BigBoss_Behavior : MonoBehaviour{
 	public float timeToBite = 2f;
 	public float timeToTail = 2f;
 
+
 	public bool startBoss = false;
 	
     void Start(){
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponentInChildren<GameHandler>();
 		anim = GetComponentInChildren<Animator>();
-        cameraScreenShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraScreenShake>();
-		//welcomeMSG.SetActive(false);
-		//goodbyeMSG.SetActive(false);
+		cameraScreenShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraScreenShake>();
+
     }
 
 
