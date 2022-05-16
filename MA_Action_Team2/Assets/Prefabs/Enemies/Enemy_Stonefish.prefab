@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3615268331096649249}
   - component: {fileID: 1979440151448386006}
   m_Layer: 7
-  m_Name: stonefish_swim_0
+  m_Name: stonefish_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -4560072138715379631, guid: 20af2555203a44948a5c88199bd90754, type: 3}
+  m_Sprite: {fileID: 1105673798947119027, guid: 2dd7e6331c5a2464b9ea4a3119e0f90f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
