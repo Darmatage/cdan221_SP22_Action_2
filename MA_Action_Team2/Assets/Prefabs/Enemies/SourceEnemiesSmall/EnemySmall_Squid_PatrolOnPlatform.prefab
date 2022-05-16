@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4082787876035351118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8620506650956706507}
+  m_Layer: 7
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8620506650956706507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082787876035351118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.46, y: -0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6632196284348779758}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6632196283668613231
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,10 +145,11 @@ GameObject:
   - component: {fileID: 6632196284348779757}
   - component: {fileID: 6632196284348779756}
   - component: {fileID: 6632196284348779759}
+  - component: {fileID: 2897486596008519836}
   - component: {fileID: 582550531229351335}
   m_Layer: 7
-  m_Name: Enemy_SquidPatrol
-  m_TagString: Untagged
+  m_Name: EnemySmall_Squid_PatrolOnPlatform
+  m_TagString: EnemyShooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +167,7 @@ Transform:
   m_Children:
   - {fileID: 6632196283668613224}
   - {fileID: 6632196285184619248}
+  - {fileID: 8620506650956706507}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -206,6 +238,26 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 6632196285184619248}
   damage: 10
+--- !u!114 &2897486596008519836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632196284348779763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b9559576676f74682553539e1f1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stoppingDistance: 4
+  retreatDistance: 3
+  startTimeBtwShots: 2
+  projectile: {fileID: 5981041056973855291, guid: 507445a284d649443a1ef33618b97b4b, type: 3}
+  shootPoint: {fileID: 8620506650956706507}
+  attackRange: 10
+  isAttacking: 0
 --- !u!114 &582550531229351335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  healthLoot: {fileID: 766432169613993589, guid: 843a455833f0ffe499528dbf012bbec9, type: 3}
+  healthLoot: {fileID: 8656293781595869630, guid: 60ed0f59fc27cb74d9b36493267e5be0, type: 3}
   maxHealth: 100
   currentHealth: 50
 --- !u!1 &6632196285184619255
