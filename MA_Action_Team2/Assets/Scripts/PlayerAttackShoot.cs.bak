@@ -10,6 +10,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       public float projectileSpeed = 10f;
       public float attackRate = 2f;
       private float nextAttackTime = 0f;
+	  public AudioSource ShootSFX;
 
       void Start(){
            animator = gameObject.GetComponentInChildren<Animator>();
@@ -22,6 +23,7 @@ public class PlayerAttackShoot : MonoBehaviour{
 				if (GameHandler.mutation4active == true){
 					playerFire();
 					Debug.Log("I hit the shoot button");
+					JumpSFX.Play();
 				}
 				nextAttackTime = Time.time + 1f / attackRate;
 			}
