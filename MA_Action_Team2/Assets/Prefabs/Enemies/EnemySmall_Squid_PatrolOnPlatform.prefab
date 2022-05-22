@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 6632196284348779757}
   - component: {fileID: 6632196284348779756}
   - component: {fileID: 6632196284348779759}
-  - component: {fileID: 2897486596008519836}
   - component: {fileID: 582550531229351335}
   m_Layer: 7
   m_Name: EnemySmall_Squid_PatrolOnPlatform
@@ -184,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008594751, y: -0.023671627}
+  m_Offset: {x: 0.008594751, y: 0.5363182}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -195,7 +194,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7783246, y: 3.8086133}
+  m_Size: {x: 3.7783246, y: 2.6886337}
   m_EdgeRadius: 0
 --- !u!50 &6632196284348779756
 Rigidbody2D:
@@ -237,27 +236,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 6632196285184619248}
+  rayDistance: 1
   damage: 10
---- !u!114 &2897486596008519836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6632196284348779763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b9559576676f74682553539e1f1a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stoppingDistance: 4
-  retreatDistance: 3
-  startTimeBtwShots: 2
-  projectile: {fileID: 5981041056973855291, guid: 507445a284d649443a1ef33618b97b4b, type: 3}
-  shootPoint: {fileID: 8620506650956706507}
-  attackRange: 10
-  isAttacking: 0
 --- !u!114 &582550531229351335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6632196285184619255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.374, y: -1.37, z: 0}
+  m_LocalPosition: {x: 2.374, y: -0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6632196284348779758}

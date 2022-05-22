@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3507668295825766800}
   - component: {fileID: 736560291649609610}
   - component: {fileID: 2076512000306479558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BouncyTealJellyfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}

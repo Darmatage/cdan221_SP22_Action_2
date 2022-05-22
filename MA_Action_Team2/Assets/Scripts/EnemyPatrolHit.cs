@@ -12,6 +12,7 @@ public class EnemyPatrolHit : MonoBehaviour {
     public Transform groundCheck;
     bool isFacingRight = true;
     RaycastHit2D hit;
+	public float rayDistance = 1f;
 
     public int damage = 10;
     private GameHandler gameHandler;
@@ -26,7 +27,8 @@ public class EnemyPatrolHit : MonoBehaviour {
     }
 
     void Update(){
-        hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
+        hit = Physics2D.Raycast(groundCheck.position, -transform.up, rayDistance, groundLayers);
+		Debug.DrawRay(groundCheck.position, -transform.up, Color.white, rayDistance, true); 
     }
 
     void FixedUpdate(){

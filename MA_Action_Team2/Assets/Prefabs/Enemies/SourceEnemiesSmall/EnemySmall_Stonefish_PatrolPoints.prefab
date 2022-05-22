@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6157110957860934768}
   - component: {fileID: 2577668820771915541}
   - component: {fileID: 7815631708909350087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySmall_Stonefish_PatrolPoints
   m_TagString: EnemyShooter
   m_Icon: {fileID: 0}
@@ -259,6 +259,7 @@ MonoBehaviour:
   shootPoint: {fileID: 5300690744436971215}
   attackRange: 10
   isAttacking: 0
+  isSmallSquid: 0
 --- !u!114 &7815631708909350087
 MonoBehaviour:
   m_ObjectHideFlags: 0

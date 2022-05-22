@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3100585188661456442}
   - component: {fileID: -7242874955072321579}
   - component: {fileID: 5685076750758792357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySmall_SunfishPatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
