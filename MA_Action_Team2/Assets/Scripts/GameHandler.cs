@@ -78,11 +78,43 @@ public class GameHandler : MonoBehaviour {
     
 	void Update (){
 		
+		//cheat codes:
+		if (Input.GetKeyDown("1")){
+			mutation1active = true;
+			mutation2active = false;
+			mutation3active = false;
+			mutation4active = false;
+			}
+		if (Input.GetKeyDown("2")){
+			mutation1active = false;
+			mutation2active = true;
+			mutation3active = false;
+			mutation4active = false;
+			}
+		if (Input.GetKeyDown("3")){
+			mutation1active = false;
+			mutation2active = false;
+			mutation3active = true;
+			mutation4active = false;
+			}
+		if (Input.GetKeyDown("4")){
+			mutation1active = false;
+			mutation2active = false;
+			mutation3active = false;
+			mutation4active = true;
+			}
+		if (Input.GetKeyDown("0")){
+			mutation1active = false;
+			mutation2active = false;
+			mutation3active = false;
+			mutation4active = false;
+			}			
+		
 		//Power Icons:
-		if (mutation1active == true){mutationIcon1.SetActive(true);}
-		if (mutation2active == true){mutationIcon2.SetActive(true);}
-		if (mutation3active == true){mutationIcon3.SetActive(true);}
-		if (mutation4active == true){mutationIcon4.SetActive(true);}
+		if (mutation1active == true){mutationIcon1.SetActive(true);} else {mutationIcon1.SetActive(false);}
+		if (mutation2active == true){mutationIcon2.SetActive(true);} else {mutationIcon2.SetActive(false);}
+		if (mutation3active == true){mutationIcon3.SetActive(true);} else {mutationIcon3.SetActive(false);}
+		if (mutation4active == true){mutationIcon4.SetActive(true);} else {mutationIcon4.SetActive(false);}
 		
 		//power #1: enable SpriteMask to see in the dark
 		if (mutation1active==false){
@@ -100,6 +132,7 @@ public class GameHandler : MonoBehaviour {
                 Pause();
             }
         }
+		
     }
 
 	void Pause(){
@@ -178,6 +211,11 @@ public class GameHandler : MonoBehaviour {
             Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
             playerHealth = maxHealth;
+			
+			mutation1active = false; 
+			mutation2active = false; 
+			mutation3active = false; 
+			mutation4active = false; 
       }
 
       public void QuitGame() {

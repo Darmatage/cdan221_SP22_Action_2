@@ -100,6 +100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1639522607886025843}
     m_Modifications:
+    - target: {fileID: 1154639621982848978, guid: c90d14b6532694140b899c515c37da42, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5937646891834753814, guid: c90d14b6532694140b899c515c37da42, type: 3}
       propertyPath: moveSpots.Array.data[0]
       value: 

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6632196283668613225}
   - component: {fileID: 5803500931726127605}
   m_Layer: 7
-  m_Name: Squid
+  m_Name: Squid_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

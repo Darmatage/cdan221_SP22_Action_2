@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMutations : MonoBehaviour
 {
+	// this script controls which player character art and animator is active
 	
 	public GameObject art_default;
 	public GameObject art_EyeStalk;

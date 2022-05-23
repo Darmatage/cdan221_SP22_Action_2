@@ -52,6 +52,9 @@ public class PlayerMove : MonoBehaviour {
 				 
             if ((hMove != nullMove)&&(canClimbNow == false)){
 				animator.SetBool ("Walk", true);
+				if(GameHandler.mutation3active == true){
+					animator.SetBool ("Climb", false);
+				}
             //       if (!WalkSFX.isPlaying){
             //             WalkSFX.Play();
             //      }

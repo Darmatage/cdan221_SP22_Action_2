@@ -26,7 +26,7 @@ public class EnemyMoveShoot : MonoBehaviour {
     public bool isAttacking = false;
     private float scaleX;
 
-	public bool isSmallSquid = false;
+	//public bool isSmallSquid = false;
 
 
 	void Start () {
@@ -51,9 +51,9 @@ public class EnemyMoveShoot : MonoBehaviour {
 		float DistToPlayer = Vector3.Distance(transform.position, player.position);
 		if ((player != null) && (DistToPlayer <= attackRange)) {
 					
-			if (isSmallSquid==false){
+			//if (isSmallSquid==false){
 				GetComponent<NPC_PatrolSequencePoints>().enabled = false;	  
-			}	  
+			//}	  
 				  
 			// approach player
 			if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
@@ -99,9 +99,9 @@ public class EnemyMoveShoot : MonoBehaviour {
 			}
 		}
 		
-		if (isSmallSquid==false){
+		//if (isSmallSquid==false){
 				GetComponent<NPC_PatrolSequencePoints>().enabled = true;	  
-		}	 
+		//}	 
 		
 	}
 
